@@ -17,23 +17,23 @@ class Finediff implements FinediffContract
         return $this->getEngine($granularity)->getOpcodes($stringOne, $stringTwo);
     }
 
-    public function getHtmlByOpCode($stringOne, $opCode, $granularity)
+    public function getHtmlByOpCode($stringOne, $opCode, $granularity = 'word')
     {
         return $this->getRenderer('html')->process($stringOne, $opCode);
     }
 
-    public function getHtmlByStrings($stringOne, $stringTwo, $granularity)
+    public function getHtmlByStrings($stringOne, $stringTwo, $granularity = 'word')
     {
         $opCode = $this->getOpCode($stringOne, $stringTwo);
         return $this->getHtmlByOpCode($stringOne, $opCode, $granularity);
     }
 
-    public function getTextByOpCode($stringOne, $opCode, $granularity)
+    public function getTextByOpCode($stringOne, $opCode, $granularity = 'word')
     {
         return $this->getRenderer('text')->process($stringOne, $opCode);
     }
 
-    public function getTextByStrings($stringOne, $stringTwo, $granularity)
+    public function getTextByStrings($stringOne, $stringTwo, $granularity = 'word')
     {
         $opCode = $this->getOpCode($stringOne, $stringTwo);
         return $this->getTextByOpCode($stringOne, $opCode, $granularity);
