@@ -1,4 +1,5 @@
 <?php
+
 namespace Gummibeer\Finediff;
 
 use Gummibeer\Finediff\Contracts\FinediffContract;
