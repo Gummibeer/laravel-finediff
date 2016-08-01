@@ -1,4 +1,5 @@
 <?php
+
 namespace Gummibeer\Finediff\Lib;
 
 use cogpowered\FineDiff\Diff;
@@ -25,6 +26,7 @@ class Finediff implements FinediffContract
     public function getHtmlByStrings($stringOne, $stringTwo, $granularity = 'word')
     {
         $opCode = $this->getOpCode($stringOne, $stringTwo);
+
         return $this->getHtmlByOpCode($stringOne, $opCode, $granularity);
     }
 
@@ -36,6 +38,7 @@ class Finediff implements FinediffContract
     public function getTextByStrings($stringOne, $stringTwo, $granularity = 'word')
     {
         $opCode = $this->getOpCode($stringOne, $stringTwo);
+
         return $this->getTextByOpCode($stringOne, $opCode, $granularity);
     }
 

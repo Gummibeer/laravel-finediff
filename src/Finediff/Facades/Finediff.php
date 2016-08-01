@@ -1,4 +1,5 @@
 <?php
+
 namespace Gummibeer\Finediff\Facades;
 
 use Illuminate\Support\Facades\Facade;
@@ -9,5 +10,4 @@ class Finediff extends Facade
     {
         return 'finediff';
     }
-
 }
